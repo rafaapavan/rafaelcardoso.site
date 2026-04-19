@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<!-- Variante B — Transformação -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foto Profissional com IA — @rafacardoso.ia</title>
+  <meta name="description" content="Foto Profissional de estúdio gerada com IA. Entregue em até 24h. Por apenas R$ 27.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-0: #030D1A;
+      --bg-1: #07152A;
+      --bg-2: #0C1E38;
+      --bg-3: #112646;
+      --blue-vivid: #2563EB;
+      --blue-glow: rgba(37, 99, 235, 0.14);
+      --blue-border: rgba(59, 130, 246, 0.22);
+      --blue-pale: #BFDBFE;
+      --white: #FFFFFF;
+      --off-white: #EEF4FF;
+      --muted: #7C9DC0;
+      --cta: #FF6B2B;
+      --cta-dark: #E55A1C;
+      --cta-glow: rgba(255, 107, 43, 0.28);
+      --green: #10B981;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg-0);
+      color: var(--white);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.15; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+
+    /* ───── HEADER ───── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(3, 13, 26, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--blue-border);
+      padding: 14px 20px;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--blue-pale);
+      letter-spacing: -0.01em;
+    }
+
+    .btn-header {
+      background: var(--cta);
+      color: white;
+      padding: 9px 20px;
+      border-radius: 7px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-header:hover { background: var(--cta-dark); transform: translateY(-1px); }
+
+    /* ───── HERO ───── */
+    .hero {
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -120px;
+      right: -160px;
+      width: 640px;
+      height: 640px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.11) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: -80px;
+      left: -120px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 107, 43, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid var(--blue-border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      color: var(--blue-pale);
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--white);
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    .hero h1 em { font-style: italic; color: var(--blue-pale); }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .hero-sub strong { color: var(--off-white); }
+
+    .price-anchor {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding: 16px 20px;
+      background: var(--bg-2);
+      border-radius: 10px;
+      border: 1px solid var(--blue-border);
+      animation: fadeUp 0.6s 0.25s ease both;
+    }
+    .price-old {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+    .price-old span { font-size: 0.72rem; display: block; margin-top: 2px; }
+    .price-new {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .price-note { font-size: 0.76rem; color: var(--muted); margin-top: 2px; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 28px;
+      background: var(--cta);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 4px 24px var(--cta-glow);
+      letter-spacing: -0.01em;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+    .btn-primary:hover {
+      background: var(--cta-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--cta-glow);
+    }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-micro {
+      margin-top: 12px;
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-align: center;
+      animation: fadeUp 0.6s 0.35s ease both;
+    }
+
+    /* ───── HERO VISUAL ───── */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      animation: fadeUp 0.8s 0.15s ease both;
+    }
+
+    .photo-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .photo-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
+    }
+    .photo-row.highlight { background: rgba(37, 99, 235, 0.06); }
+
+    .p-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .av-before { background: linear-gradient(135deg, #1a2535, #111d2e); }
+    .av-after  { background: linear-gradient(135deg, #1D4ED8, #1e3fa8); box-shadow: 0 0 0 2px rgba(59,130,246,0.5); }
+    .av-green  { background: linear-gradient(135deg, #0d4f3a, #072e22); box-shadow: 0 0 0 2px rgba(16,185,129,0.4); }
+
+    .p-info { flex: 1; }
+    .p-name { font-weight: 600; font-size: 0.88rem; }
+    .p-role { font-size: 0.74rem; color: var(--muted); }
+    .p-tag  { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; }
+    .tag-b  { background: rgba(255,255,255,0.07); color: var(--muted); }
+    .tag-a  { background: rgba(16,185,129,0.14); color: var(--green); }
+
+    .divider { height: 1px; background: var(--blue-border); }
+
+    .stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+    }
+    .stat-num { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; }
+    .stat-lab { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+    /* ───── TRUST BAR ───── */
+    .trust-bar {
+      border-top: 1px solid var(--blue-border);
+      border-bottom: 1px solid var(--blue-border);
+      padding: 18px 0;
+      background: var(--bg-1);
+    }
+    .trust-items {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ───── SECTIONS ───── */
+    section { padding: 80px 0; }
+
+    .section-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue-pale);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.97rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .text-center .section-sub { margin: 0 auto; }
+
+    /* ───── HOW IT WORKS ───── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 44px;
+    }
+    .step-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 14px;
+      padding: 26px 22px;
+      transition: border-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+    }
+    .step-card:hover { border-color: rgba(59, 130, 246, 0.5); }
+
+    .step-icon-wrap {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-title { font-weight: 700; font-size: 0.97rem; margin-bottom: 9px; }
+    .step-desc  { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+    /* ───── TESTIMONIALS ───── */
+    .testi-bg {
+      background: var(--bg-1);
+      border-top: 1px solid var(--blue-border);
+      border-bottom: 1px solid var(--blue-border);
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+    .testi-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .testi-stars { color: #FFC107; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .testi-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--off-white);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .t-av {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .t-name { font-size: 0.83rem; font-weight: 600; }
+    .t-role { font-size: 0.72rem; color: var(--muted); }
+
+    /* ───── CATALOG ───── */
+    .catalog-bg {
+      background: var(--bg-1);
+      border-top: 1px solid var(--blue-border);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .style-card {
+      background: var(--bg-2);
+      border: 2px solid var(--blue-border);
+      border-radius: 13px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+    }
+    .style-card:hover {
+      border-color: rgba(59, 130, 246, 0.55);
+      transform: translateY(-2px);
+    }
+    .style-card.selected {
+      border-color: var(--cta);
+      box-shadow: 0 0 0 1px var(--cta), 0 4px 20px var(--cta-glow);
+    }
+    .style-check {
+      display: none;
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 22px; height: 22px;
+      background: var(--cta);
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: white;
+      z-index: 2;
+    }
+    .style-card.selected .style-check { display: flex; }
+
+    .style-preview {
+      height: 118px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .style-info { padding: 13px; }
+    .style-name { font-weight: 700; font-size: 0.88rem; }
+    .style-desc { font-size: 0.73rem; color: var(--muted); margin-top: 3px; }
+
+    /* Gradient themes */
+    .g1 { background: linear-gradient(160deg, #071830 0%, #0e2d55 60%, #091e3a 100%); }
+    .g2 { background: linear-gradient(160deg, #0d0f1a 0%, #1b2540 60%, #0d1220 100%); }
+    .g3 { background: linear-gradient(160deg, #1a0d40 0%, #2d1a62 60%, #180c3a 100%); }
+    .g4 { background: linear-gradient(160deg, #071a0d 0%, #113320 60%, #061208 100%); }
+    .g5 { background: linear-gradient(160deg, #1f0a0a 0%, #3a1212 60%, #200808 100%); }
+    .g6 { background: linear-gradient(160deg, #1c1508 0%, #322210 60%, #201508 100%); }
+    .g7 { background: linear-gradient(160deg, #0d1520 0%, #1a2d45 60%, #0c1825 100%); }
+
+    /* SVG figures */
+    .style-fig { width: 52px; height: 96px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+    /* ───── SELECTION NOTICE ───── */
+    .sel-notice {
+      margin-top: 20px;
+      padding: 13px 18px;
+      background: rgba(255, 107, 43, 0.08);
+      border: 1px solid rgba(255, 107, 43, 0.28);
+      border-radius: 10px;
+      font-size: 0.88rem;
+      color: var(--off-white);
+      display: none;
+    }
+    .sel-notice.on { display: block; }
+    .sel-notice strong { color: var(--cta); }
+
+    .sel-notice.error {
+      background: rgba(255, 50, 50, 0.08);
+      border-color: rgba(255, 50, 50, 0.3);
+    }
+
+    .catalog-cta-wrap {
+      margin-top: 30px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .catalog-cta-micro {
+      margin-top: 10px;
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+    .catalog-cta-micro strong { color: var(--cta); cursor: pointer; }
+    .catalog-cta-micro strong:hover { text-decoration: underline; }
+
+    /* ───── TIPS ───── */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .tip-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 12px;
+      padding: 20px 18px;
+    }
+    .tip-emoji { font-size: 1.7rem; margin-bottom: 10px; }
+    .tip-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+    .tip-desc  { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+    /* ───── URGENCY ───── */
+    .urgency-bg {
+      background: linear-gradient(160deg, var(--bg-1) 0%, rgba(37, 99, 235, 0.07) 100%);
+      border-top: 1px solid var(--blue-border);
+    }
+    .urgency-box {
+      background: var(--bg-2);
+      border: 1px solid rgba(255, 107, 43, 0.28);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .urgency-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cta), transparent);
+    }
+
+    .slots-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin: 22px 0 10px;
+    }
+    .slot {
+      width: 26px; height: 7px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .slot.taken     { background: rgba(255, 107, 43, 0.4); }
+    .slot.next      { background: var(--cta); }
+    .slot.available { background: var(--bg-3); border: 1px solid var(--blue-border); }
+
+    .slots-label { font-size: 0.8rem; color: var(--muted); }
+
+    /* ───── FINAL CTA ───── */
+    .final-cta { padding: 80px 0; }
+    .cta-box {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue-border), transparent);
+    }
+
+    .cta-price     { font-family: var(--serif); font-size: 3.2rem; font-weight: 700; line-height: 1; }
+    .cta-price-sub { font-size: 0.82rem; color: var(--muted); margin: 7px 0 28px; }
+
+    /* ───── PAYMENT BADGE ───── */
+    .pay-badge {
+      margin-top: 18px;
+      padding: 16px;
+      background: var(--bg-1);
+      border: 1px solid var(--blue-border);
+      border-radius: 10px;
+    }
+    .pay-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    /* MP logo inline */
+    .mp-logo-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      vertical-align: middle;
+    }
+
+    .pay-methods {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* PIX icon */
+    .pix-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(50, 188, 173, 0.12);
+      border: 1px solid rgba(50,188,173,0.3);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #32BCAD;
+    }
+    /* Cartão icon */
+    .card-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,99,235,0.1);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--blue-pale);
+    }
+
+    .pay-details {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .pay-details span { font-size: 0.74rem; color: var(--muted); }
+
+    /* ───── FAQ ───── */
+    .faq-bg { background: var(--bg-1); border-top: 1px solid var(--blue-border); }
+
+    .faq-list {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    details {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    details[open] { border-color: rgba(59, 130, 246, 0.45); }
+
+    summary {
+      padding: 17px 20px;
+      font-weight: 600;
+      font-size: 0.93rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      gap: 12px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--blue-pale);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    details[open] summary::after { content: '−'; }
+
+    .faq-answer {
+      padding: 0 20px 17px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .faq-answer a { color: var(--blue-pale); text-decoration: none; }
+
+    /* ───── FOOTER ───── */
+    footer {
+      padding: 30px 20px;
+      border-top: 1px solid var(--blue-border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+
+    .footer-disclaimer {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--blue-border);
+      border-radius: 8px;
+      font-size: 0.7rem;
+      color: rgba(124,157,192,0.7);
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .footer-disclaimer strong { text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.05em; }
+
+    /* ───── WA FLOAT BUTTON ───── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: all 0.2s;
+      animation: fadeUp 0.6s 1s ease both;
+    }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    .wa-tooltip {
+      position: fixed;
+      bottom: 88px;
+      right: 24px;
+      z-index: 999;
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 0.76rem;
+      color: var(--off-white);
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: all 0.2s;
+    }
+    .wa-float:hover + .wa-tooltip,
+    .wa-tooltip.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ───── ANIMATIONS ───── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20% { transform: translateX(-7px); }
+      40% { transform: translateX(7px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+    .pulse { animation: pulse 1.8s infinite; }
+
+    /* ───── RESPONSIVE ───── */
+    @media (max-width: 720px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-visual { order: -1; }
+      .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps        { grid-template-columns: 1fr; }
+      .testi-grid   { grid-template-columns: 1fr; }
+      .tips-grid    { grid-template-columns: 1fr; }
+      .cta-box      { padding: 32px 20px; }
+    }
+
+    @media (max-width: 400px) {
+      .catalog-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ───── PAIN / PROOF SECTION ───── */
+    .mid-section {
+      padding: 72px 0;
+      background: var(--bg-1);
+      border-top: 1px solid var(--blue-border);
+      border-bottom: 1px solid var(--blue-border);
+    }
+    .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 40px; }
+    .pain-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      transition: border-color .3s;
+    }
+    .pain-card:hover { border-color: rgba(59,130,246,.5); }
+    .pain-icon { font-size: 1.9rem; margin-bottom: 12px; }
+    .pain-title { font-weight: 700; font-size: .93rem; margin-bottom: 7px; color: var(--off-white); }
+    .pain-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+    .stat-highlight {
+      display: inline-block;
+      background: rgba(255,107,43,.1);
+      border: 1px solid rgba(255,107,43,.25);
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: .78rem;
+      color: rgba(255,107,43,.9);
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    .proof-strip { display: flex; gap: 20px; margin-top: 40px; flex-wrap: wrap; justify-content: center; }
+    .proof-bubble {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 50px;
+      padding: 12px 22px;
+      font-size: .84rem;
+      color: var(--off-white);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .transf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 40px; }
+    .transf-card {
+      background: var(--bg-2);
+      border: 1px solid var(--blue-border);
+      border-radius: 14px;
+      padding: 24px 20px;
+    }
+    .transf-before { font-size: .78rem; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .06em; }
+    .transf-after  { font-size: .78rem; color: var(--green); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .06em; }
+    .transf-text { font-family: var(--serif); font-style: italic; font-size: .95rem; color: var(--off-white); line-height: 1.55; }
+    @media (max-width:720px) {
+      .pain-grid { grid-template-columns: 1fr; }
+      .transf-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<header>
+  <div class="header-inner">
+    <div class="logo">@rafacardoso.ia</div>
+    <a href="#catalogo" class="btn-header">Quero minha Foto Profissional →</a>
+  </div>
+</header>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+
+    <div class="hero-content">
+      <div class="hero-badge">📸 &nbsp;Ensaios com IA · sem precisar de fotógrafo</div>
+      <h1>Transforme selfies comuns<br>em fotos de estúdio.<br><em>Sem sair de casa.</em></h1>
+      <p class="hero-sub">
+        Imagine abrir seu LinkedIn amanhã com uma foto que realmente representa quem você é — <strong>profissional, confiante, pronta para qualquer oportunidade</strong>. Sem agendamento, sem deslocamento, sem gastar R$ 900.
+      </p>
+
+      <div class="price-anchor">
+        <div>
+          <div class="price-old">Ensaio em estúdio: R$ 900</div>
+          <span style="font-size:.72rem;color:var(--muted);">Mesma qualidade profissional</span>
+        </div>
+        <div style="color:var(--muted);font-size:1.2rem;">→</div>
+        <div>
+          <div class="price-new">R$ 27</div>
+          <div class="price-note">ou 3× de R$ 9,90 no cartão</div>
+        </div>
+      </div>
+
+      <a href="https://mpago.li/1Cnze1P" class="btn-primary" target="_blank" rel="noopener">✦ Quero minha transformação — R$ 27</a>
+      <div class="btn-micro">🔒 Pagamento 100% seguro · Entrega em até 24h · Sem sair de casa</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-card">
+        <div class="photo-row">
+          <div class="p-avatar av-before"><span>🤳</span></div>
+          <div class="p-info">
+            <div class="p-name" style="color:var(--muted)">Selfie comum</div>
+            <div class="p-role">Tirada com celular, sem preparo</div>
+          </div>
+          <span class="p-tag tag-b">Antes</span>
+        </div>
+        <div class="divider"></div>
+        <div class="photo-row highlight">
+          <div class="p-avatar av-after"><span>✨</span></div>
+          <div class="p-info">
+            <div class="p-name" style="color:var(--blue-pale)">Mesma pessoa</div>
+            <div class="p-role">Foto de estúdio profissional com IA</div>
+          </div>
+          <span class="p-tag tag-a">Depois</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-row highlight">
+          <div class="p-avatar av-green"><span>🌟</span></div>
+          <div class="p-info">
+            <div class="p-name" style="color:var(--off-white)">Marina S.</div>
+            <div class="p-role">Psicóloga · "Fui à reunião com muito mais confiança"</div>
+          </div>
+          <span class="p-tag tag-a">Depois</span>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num" style="color:var(--cta)">R$ 27</div>
+          <div class="stat-lab">preço único</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" style="color:var(--green)">24h</div>
+          <div class="stat-lab">prazo de entrega</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════ TRUST BAR ════════════════ -->
+<div class="trust-bar">
+  <div class="trust-items">
+    <div class="trust-item"><span>🔒</span><span>Pagamento seguro</span></div>
+    <div class="trust-item"><span>⚡</span><span>Entrega em até 24h</span></div>
+    <div class="trust-item"><span>✨</span><span>Qualidade garantida</span></div>
+    <div class="trust-item"><span>💬</span><span>Suporte via WhatsApp</span></div>
+  </div>
+</div>
+
+<!-- ════════════════ MID SECTION B (TRANSFORMAÇÃO) ════════════════ -->
+<section class="mid-section">
+  <div class="container">
+    <div class="section-label">O antes e o depois</div>
+    <h2 class="section-title">A mesma profissional. Uma presença completamente diferente.</h2>
+    <p class="section-sub">Sua essência não muda. O que muda é como o mundo te vê — e como você se sente ao compartilhar seu perfil.</p>
+    <div class="transf-grid">
+      <div class="transf-card">
+        <div class="transf-before">Antes</div>
+        <p class="transf-text">"Evitava compartilhar meu LinkedIn porque tinha vergonha da foto. Sabia que não estava me representando bem, mas sempre adiava."</p>
+      </div>
+      <div class="transf-card">
+        <div class="transf-after">Depois</div>
+        <p class="transf-text">"Hoje mando o link do LinkedIn com orgulho. Recrutadores me elogiaram e clientes novos comentaram o profissionalismo da foto."</p>
+      </div>
+      <div class="transf-card">
+        <div class="transf-before">Antes</div>
+        <p class="transf-text">"Pagaria R$ 900 num estúdio, mas nunca tinha tempo de agendar. A foto ficou parada por meses, esperando a hora certa."</p>
+      </div>
+      <div class="transf-card">
+        <div class="transf-after">Depois</div>
+        <p class="transf-text">"Em menos de 24h tinha minha foto profissional. Por R$ 27. Parece mágica — mas é inteligência artificial, e o resultado é real."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ HOW IT WORKS ════════════════ -->
+<section>
+  <div class="container text-center">
+    <div class="section-label">Como funciona</div>
+    <h2 class="section-title">Simples. Rápido. Sem sair de casa.</h2>
+    <p class="section-sub">Em três passos você tem sua Foto Profissional pronta para usar no LinkedIn, WhatsApp, Instagram e onde mais precisar.</p>
+    <div class="steps">
+
+      <!-- Passo 1: Escolha seu estilo -->
+      <div class="step-card">
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+            <!-- Fundo decorativo -->
+            <rect x="0" y="0" width="80" height="80" rx="16" fill="rgba(37,99,235,0.07)"/>
+            <!-- Grade 3x2 de bonequinhos em miniatura -->
+            <!-- Linha 1, col 1 (azul) -->
+            <circle cx="18" cy="22" r="5" fill="rgba(100,160,240,0.55)"/>
+            <rect x="12" y="29" width="12" height="14" rx="3" fill="rgba(80,140,220,0.3)"/>
+            <!-- Linha 1, col 2 (roxo) -->
+            <circle cx="40" cy="22" r="5" fill="rgba(160,100,230,0.55)"/>
+            <rect x="34" y="29" width="12" height="14" rx="3" fill="rgba(140,80,210,0.3)"/>
+            <!-- Linha 1, col 3 (verde) -->
+            <circle cx="62" cy="22" r="5" fill="rgba(80,200,140,0.55)"/>
+            <rect x="56" y="29" width="12" height="14" rx="3" fill="rgba(60,180,120,0.3)"/>
+            <!-- Linha 2, col 1 (coral) -->
+            <circle cx="18" cy="54" r="5" fill="rgba(220,80,80,0.55)"/>
+            <rect x="12" y="61" width="12" height="14" rx="3" fill="rgba(200,60,60,0.3)"/>
+            <!-- Linha 2, col 2 (âmbar) -->
+            <circle cx="40" cy="54" r="5" fill="rgba(200,160,80,0.55)"/>
+            <rect x="34" y="61" width="12" height="14" rx="3" fill="rgba(180,140,60,0.3)"/>
+            <!-- Linha 2, col 3 (cinza azul) -->
+            <circle cx="62" cy="54" r="5" fill="rgba(100,140,200,0.55)"/>
+            <rect x="56" y="61" width="12" height="14" rx="3" fill="rgba(80,120,180,0.3)"/>
+            <!-- Seleção highlight no col 2 linha 1 -->
+            <rect x="33" y="15" width="14" height="29" rx="4" fill="none" stroke="rgba(255,107,43,0.7)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="step-title">Escolha seu estilo</div>
+        <div class="step-desc">Selecione o visual que mais combina com você no catálogo abaixo. São 7 estilos desenvolvidos para diferentes perfis profissionais.</div>
+      </div>
+
+      <!-- Passo 2: Envie suas fotos -->
+      <div class="step-card">
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+            <rect x="0" y="0" width="80" height="80" rx="16" fill="rgba(37,99,235,0.07)"/>
+            <!-- Celular -->
+            <rect x="28" y="12" width="24" height="42" rx="5" fill="rgba(37,99,235,0.18)" stroke="rgba(100,160,240,0.45)" stroke-width="1.5"/>
+            <!-- Tela do celular com mini-foto -->
+            <rect x="31" y="16" width="18" height="22" rx="2" fill="rgba(100,160,240,0.12)"/>
+            <!-- Rosto na tela -->
+            <circle cx="40" cy="22" r="4" fill="rgba(100,160,240,0.4)"/>
+            <rect x="34" y="28" width="12" height="8" rx="2" fill="rgba(100,160,240,0.2)"/>
+            <!-- Botão home -->
+            <circle cx="40" cy="48" r="2" fill="rgba(100,160,240,0.35)"/>
+            <!-- Seta de envio saindo do celular -->
+            <path d="M52 32 L64 25" stroke="rgba(255,107,43,0.7)" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M58 20 L64 25 L59 30" fill="none" stroke="rgba(255,107,43,0.7)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Ondas de envio -->
+            <path d="M54 36 Q60 32 54 28" fill="none" stroke="rgba(255,107,43,0.3)" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M57 38 Q65 33 57 25" fill="none" stroke="rgba(255,107,43,0.18)" stroke-width="1" stroke-linecap="round"/>
+            <!-- Pequenas fotos flutuando -->
+            <rect x="12" y="28" width="14" height="11" rx="2" fill="rgba(37,99,235,0.15)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+            <circle cx="16" cy="31" r="2" fill="rgba(100,160,240,0.35)"/>
+            <rect x="13" y="34" width="12" height="4" rx="1" fill="rgba(100,160,240,0.12)"/>
+            <!-- Indicador de check verde embaixo -->
+            <circle cx="40" cy="68" r="7" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)" stroke-width="1"/>
+            <path d="M36 68 L39 71 L44 65" stroke="rgba(16,185,129,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="step-title">Envie suas fotos</div>
+        <div class="step-desc">Após o pagamento, você envia 3 fotos suas pelo WhatsApp. Não precisa de estúdio — uma boa iluminação já é suficiente.</div>
+      </div>
+
+      <!-- Passo 3: Receba em 24 horas -->
+      <div class="step-card">
+        <div class="step-icon-wrap">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+            <rect x="0" y="0" width="80" height="80" rx="16" fill="rgba(37,99,235,0.07)"/>
+            <!-- Relógio base -->
+            <circle cx="40" cy="38" r="20" fill="rgba(37,99,235,0.1)" stroke="rgba(100,160,240,0.4)" stroke-width="1.5"/>
+            <!-- Marcações do relógio -->
+            <line x1="40" y1="22" x2="40" y2="26" stroke="rgba(100,160,240,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="40" y1="50" x2="40" y2="54" stroke="rgba(100,160,240,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="24" y1="38" x2="28" y2="38" stroke="rgba(100,160,240,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="52" y1="38" x2="56" y2="38" stroke="rgba(100,160,240,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Ponteiros -->
+            <line x1="40" y1="38" x2="40" y2="27" stroke="rgba(191,219,254,0.9)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="38" x2="50" y2="38" stroke="rgba(255,107,43,0.9)" stroke-width="2" stroke-linecap="round"/>
+            <!-- Centro -->
+            <circle cx="40" cy="38" r="2.5" fill="rgba(255,107,43,0.8)"/>
+            <!-- Raios de velocidade -->
+            <path d="M14 60 L22 56" stroke="rgba(255,107,43,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10 66 L22 62" stroke="rgba(255,107,43,0.25)" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M13 72 L22 68" stroke="rgba(255,107,43,0.15)" stroke-width="1" stroke-linecap="round"/>
+            <!-- Raios direita -->
+            <path d="M66 60 L58 56" stroke="rgba(255,107,43,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M70 66 L58 62" stroke="rgba(255,107,43,0.25)" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M67 72 L58 68" stroke="rgba(255,107,43,0.15)" stroke-width="1" stroke-linecap="round"/>
+            <!-- Texto 24h abaixo -->
+            <text x="40" y="75" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="9" font-weight="700" fill="rgba(255,107,43,0.7)">24h</text>
+          </svg>
+        </div>
+        <div class="step-title">Receba em 24 horas</div>
+        <div class="step-desc">Sua Foto Profissional entregue em até 24 horas, com qualidade de estúdio, pronta para usar onde você precisar.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TESTIMONIALS ════════════════ -->
+<section class="testi-bg">
+  <div class="container">
+    <div class="section-label">Depoimentos</div>
+    <h2 class="section-title">Quem já transformou sua imagem</h2>
+    <div class="testi-grid">
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Fiquei impressionada com o resultado. Parece foto de estúdio de verdade. Atualizei meu LinkedIn e já recebi elogios de recrutadores."</p>
+        <div class="testi-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#1D4ED8,#1e3fa8)">💁</div>
+          <div>
+            <div class="t-name">Fernanda M.</div>
+            <div class="t-role">Gerente de Marketing, São Paulo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Jamais imaginei que por R$ 27 teria uma foto assim. Coloquei no meu site e os clientes comentam o quanto ficou sério e elegante."</p>
+        <div class="testi-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#0d4f3a,#0a3a2a)">⚖️</div>
+          <div>
+            <div class="t-name">Camila R.</div>
+            <div class="t-role">Advogada, Rio de Janeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Atualizei meu LinkedIn com a foto nova e as visitas triplicaram. Vale cada centavo — ou melhor, cada R$ 27!"</p>
+        <div class="testi-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#3a1a6a,#2a0d50)">📊</div>
+          <div>
+            <div class="t-name">Juliana P.</div>
+            <div class="t-role">Consultora Financeira, Belo Horizonte</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Precisava de uma foto boa rápido para uma apresentação importante. Em menos de 24h tinha o resultado e fui à reunião com muito mais confiança."</p>
+        <div class="testi-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#1a3010,#0f2008)">🌿</div>
+          <div>
+            <div class="t-name">Marina S.</div>
+            <div class="t-role">Psicóloga, Curitiba</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CATALOG ════════════════ -->
+<section id="catalogo" class="catalog-bg">
+  <div class="container">
+    <div class="section-label">Catálogo de estilos</div>
+    <h2 class="section-title">Escolha o estilo da sua Foto Profissional</h2>
+    <p class="section-sub">Transforme selfies comuns em fotos de estúdio. Escolha o estilo ideal, finalize o pagamento e envie suas fotos via WhatsApp — tudo simples e rápido.</p>
+
+    <div class="catalog-grid" id="catalog-grid">
+
+      <!-- 1. Corporativa Clássica -->
+      <div class="style-card" data-style="Corporativa Clássica" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g1">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(100,160,240,0.42)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(80,140,220,0.22)"/>
+            <rect x="12" y="36" width="7" height="20" fill="rgba(100,160,240,0.28)"/>
+            <rect x="33" y="36" width="7" height="20" fill="rgba(100,160,240,0.28)"/>
+            <!-- gravata -->
+            <polygon points="26,38 23,48 26,52 29,48" fill="rgba(100,160,240,0.4)"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Corporativa Clássica</div>
+          <div class="style-desc">Ideal para LinkedIn, executivos e líderes</div>
+        </div>
+      </div>
+
+      <!-- 2. Profissional Moderna -->
+      <div class="style-card" data-style="Profissional Moderna" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g2">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(70,130,200,0.5)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(60,120,190,0.2)"/>
+            <circle cx="26" cy="65" r="7" fill="rgba(80,140,210,0.15)"/>
+            <!-- detalhe clean: linhas horizontais sutis -->
+            <rect x="14" y="44" width="24" height="2" rx="1" fill="rgba(100,160,240,0.2)"/>
+            <rect x="18" y="50" width="16" height="2" rx="1" fill="rgba(100,160,240,0.14)"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Profissional Moderna</div>
+          <div class="style-desc">Clean, atemporal e elegante</div>
+        </div>
+      </div>
+
+      <!-- 3. Empreendedora -->
+      <div class="style-card" data-style="Empreendedora" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g3">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(160,100,230,0.5)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(140,80,210,0.18)"/>
+            <polygon points="26,48 38,68 14,68" fill="rgba(160,100,220,0.18)"/>
+            <!-- estrela autoridade -->
+            <polygon points="26,40 27.5,44.5 32,44.5 28.5,47 30,51.5 26,49 22,51.5 23.5,47 20,44.5 24.5,44.5" fill="rgba(200,160,255,0.35)"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Empreendedora</div>
+          <div class="style-desc">Confiança, presença e autoridade</div>
+        </div>
+      </div>
+
+      <!-- 4. Natural & Autêntica -->
+      <div class="style-card" data-style="Natural & Autêntica" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g4">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(80,200,140,0.5)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(60,180,120,0.16)"/>
+            <ellipse cx="26" cy="68" rx="10" ry="5" fill="rgba(80,200,140,0.1)"/>
+            <!-- folha natural -->
+            <path d="M22 52 Q26 44 30 52 Q26 56 22 52Z" fill="rgba(80,200,140,0.3)"/>
+            <line x1="26" y1="52" x2="26" y2="56" stroke="rgba(80,200,140,0.4)" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Natural & Autêntica</div>
+          <div class="style-desc">Fundo neutro, tom caloroso e real</div>
+        </div>
+      </div>
+
+      <!-- 5. Criativa & Impactante -->
+      <div class="style-card" data-style="Criativa & Impactante" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g5">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(220,80,80,0.5)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(200,60,60,0.18)"/>
+            <rect x="14" y="50" width="24" height="3" rx="1.5" fill="rgba(220,80,80,0.28)"/>
+            <rect x="18" y="58" width="16" height="3" rx="1.5" fill="rgba(220,80,80,0.2)"/>
+            <!-- raio criativo -->
+            <polygon points="30,38 26,48 29,48 25,60 31,47 28,47" fill="rgba(255,160,80,0.5)"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Criativa & Impactante</div>
+          <div class="style-desc">Para profissionais criativos e ousados</div>
+        </div>
+      </div>
+
+      <!-- 6. Acadêmica & Técnica -->
+      <div class="style-card" data-style="Acadêmica & Técnica" onclick="selectStyle(this)">
+        <div class="style-check">✓</div>
+        <div class="style-preview g6">
+          <svg class="style-fig" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="20" r="11" fill="rgba(200,160,80,0.5)"/>
+            <rect x="6" y="36" width="40" height="55" rx="6" fill="rgba(180,140,60,0.16)"/>
+            <!-- chapéu de formatura -->
+            <polygon points="26,8 10,16 26,24 42,16" fill="rgba(200,160,80,0.4)"/>
+            <rect x="24" y="24" width="4" height="8" rx="1" fill="rgba(200,160,80,0.3)"/>
+            <!-- óculos acadêmico -->
+            <rect x="14" y="22" width="8" height="5" rx="2" fill="none" stroke="rgba(200,160,80,0.45)" stroke-width="1.2"/>
+            <rect x="25" y="22" width="8" height="5" rx="2" fill="none" stroke="rgba(200,160,80,0.45)" stroke-width="1.2"/>
+            <line x1="22" y1="24.5" x2="25" y2="24.5" stroke="rgba(200,160,80,0.45)" stroke-width="1.2"/>
+            <rect x="14" y="52" width="22" height="3" rx="1.5" fill="rgba(200,160,80,0.28)"/>
+            <rect x="14" y="60" width="16" height="3" rx="1.5" fill="rgba(200,160,80,0.2)"/>
+          </svg>
+        </div>
+        <div class="style-info">
+          <div class="style-name">Acadêmica & Técnica</div>
+          <div class="style-desc">Para professores, pesquisadores e técnicos</div>
+        </div>
+      </div>
+
+      <!-- 7. Personalizado -->
+      <div class="style-card" data-style="Personalizado" onclick="selectStyle(this)" style="grid-column: 1 / -1; max-width: 320px; margin: 0 auto;">
+        <div class="style-check">✓</div>
+        <div class="style-preview g7" style="height:100px;">
+          <svg class="style-fig" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:80px;">
+            <!-- corpo central -->
+            <circle cx="40" cy="20" r="11" fill="rgba(100,180,255,0.45)"/>
+            <rect x="20" y="36" width="40" height="55" rx="6" fill="rgba(80,160,235,0.15)"/>
+            <!-- ícone de pincel / personalização -->
+            <rect x="52" y="28" width="5" height="18" rx="2" fill="rgba(255,107,43,0.55)" transform="rotate(35 52 28)"/>
+            <ellipse cx="57" cy="46" rx="3" ry="2" fill="rgba(255,107,43,0.45)" transform="rotate(35 57 46)"/>
+            <!-- estrelas ao redor representando customização -->
+            <circle cx="16" cy="38" r="2" fill="rgba(255,200,80,0.5)"/>
+            <circle cx="22" cy="28" r="1.5" fill="rgba(255,200,80,0.35)"/>
+            <circle cx="64" cy="30" r="2" fill="rgba(100,220,200,0.5)"/>
+            <!-- símbolo de infinito/custom embaixo -->
+            <path d="M26 75 Q30 70 34 75 Q38 80 42 75 Q46 70 50 75" fill="none" stroke="rgba(100,180,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="style-info" style="text-align:center; padding: 14px 20px 18px;">
+          <div class="style-name" style="font-size:0.95rem; margin-bottom:5px;">✦ Personalizado — Do seu jeito</div>
+          <div class="style-desc" style="font-size:0.78rem; line-height:1.55;">
+            Você manda a foto de referência que quiser: a roupa que amar, o cenário dos seus sonhos, o fundo que representa você.<br>
+            <span style="color:rgba(255,107,43,0.8); font-size:0.72rem; margin-top:6px; display:block;">A foto mais sua de todas. Sem limites.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sel-notice" id="sel-notice">
+      ✓ Estilo selecionado: <strong id="sel-name">—</strong>. Clique abaixo para garantir sua Foto Profissional.
+    </div>
+
+    <div class="catalog-cta-wrap">
+
+      <!-- ── Campo de telefone inline ── -->
+      <div id="phone-wrap" style="margin-bottom:14px;">
+        <label style="display:block; font-size:0.8rem; color:var(--muted); margin-bottom:7px; text-align:left;">
+          📲 Seu WhatsApp — para receber a foto:
+        </label>
+        <input
+          id="client-phone"
+          type="tel"
+          inputmode="numeric"
+          placeholder="(17) 99999-9999"
+          maxlength="20"
+          style="width:100%; padding:14px 16px; border-radius:9px;
+                 border:1px solid rgba(59,130,246,0.35); background:var(--bg-1);
+                 color:white; font-size:1rem; font-family:var(--sans); outline:none;
+                 transition: border-color .2s;"
+          onfocus="this.style.borderColor='rgba(59,130,246,0.7)'"
+          onblur="this.style.borderColor='rgba(59,130,246,0.35)'"
+        />
+        <div id="phone-error" style="display:none; color:#FF6B2B; font-size:0.76rem; margin-top:6px;">
+          ⚠️ Por favor, informe um número de WhatsApp válido.
+        </div>
+      </div>
+
+      <a href="#" class="btn-primary" id="catalog-cta" onclick="return handleCatalogCTA(event)">
+        ✦ Garantir minha Foto Profissional — R$ 27
+      </a>
+      <div class="catalog-cta-micro">
+        Após o pagamento, entrarei em contato pelo WhatsApp para receber suas fotos.<br>
+        <strong onclick="openWhatsAppDirect()">Dúvidas? Fale comigo no WhatsApp →</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TIPS ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Antes de enviar</div>
+    <h2 class="section-title">Como enviar suas fotos para o melhor resultado</h2>
+    <p class="section-sub">Você não precisa de estúdio. Basta seguir estas três dicas simples:</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-emoji">☀️</div>
+        <div class="tip-title">Boa iluminação</div>
+        <div class="tip-desc">Prefira luz natural, perto de uma janela. Evite fotos escuras ou com flash direto no rosto.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-emoji">🎯</div>
+        <div class="tip-title">Rosto bem enquadrado</div>
+        <div class="tip-desc">Pelo menos uma foto com o rosto de frente, nítido e sem óculos escuros ou bonés.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-emoji">😊</div>
+        <div class="tip-title">Expressão natural</div>
+        <div class="tip-desc">Sem forçar. Um sorriso leve ou expressão séria e confiante funcionam perfeitamente.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ URGENCY ════════════════ -->
+<section class="urgency-bg">
+  <div class="container">
+    <div class="urgency-box">
+      <div class="section-label" style="color:rgba(255,107,43,0.85)">Atenção</div>
+      <h2 class="section-title">Apenas 10 vagas por dia</h2>
+      <p style="color:var(--muted); font-size:0.93rem; max-width:460px; margin:10px auto 0;">
+        Para garantir qualidade em cada entrega, aceito no máximo 10 pedidos diários.
+      </p>
+      <div class="slots-row" id="slots-row"></div>
+      <div class="slots-label" id="slots-label">Verificando disponibilidade...</div>
+      <div style="margin-top:28px; max-width:380px; margin-left:auto; margin-right:auto;">
+        <a href="#catalogo" class="btn-primary" style="animation:none;">Garantir minha vaga agora →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FINAL CTA ════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-box">
+      <div class="section-label">Pronta para transformar sua imagem?</div>
+      <h2 class="section-title" style="margin-bottom:8px">Foto Profissional por apenas</h2>
+      <div class="cta-price">R$ 27</div>
+      <div class="cta-price-sub">ou em 3× de R$ 9,90 no cartão de crédito</div>
+
+      <a href="https://mpago.li/1Cnze1P" class="btn-primary" style="animation:none; font-size:1rem;" target="_blank" rel="noopener">
+        ✦ Quero minha Foto Profissional agora
+      </a>
+
+      <div class="pay-badge">
+        <div class="pay-top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="rgba(16,185,129,0.8)"/></svg>
+          <span>Pagamento 100% seguro processado por</span>
+          <!-- Mercado Pago logo SVG inline -->
+          <svg width="60" height="16" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="32" rx="4" fill="#009EE3"/>
+            <circle cx="16" cy="16" r="9" fill="white" opacity="0.95"/>
+            <path d="M12 16 Q16 10 20 16 Q16 22 12 16Z" fill="#009EE3"/>
+            <text x="30" y="21" font-family="'Outfit',sans-serif" font-size="11" font-weight="700" fill="white">mercado pago</text>
+          </svg>
+        </div>
+        <div class="pay-methods">
+          <!-- PIX -->
+          <div class="pix-icon">
+            <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2 L22 8 L16 14 L10 8 Z" fill="#32BCAD"/>
+              <path d="M22 10 L28 16 L22 22 L16 16 Z" fill="#32BCAD" opacity="0.7"/>
+              <path d="M10 10 L16 16 L10 22 L4 16 Z" fill="#32BCAD" opacity="0.7"/>
+              <path d="M16 18 L22 24 L16 30 L10 24 Z" fill="#32BCAD"/>
+            </svg>
+            PIX
+          </div>
+          <!-- Cartão de crédito -->
+          <div class="card-icon">
+            <svg width="18" height="14" viewBox="0 0 36 28" fill="none">
+              <rect width="36" height="28" rx="4" fill="rgba(37,99,235,0.3)" stroke="rgba(100,160,240,0.5)" stroke-width="1"/>
+              <rect y="7" width="36" height="7" fill="rgba(100,160,240,0.35)"/>
+              <rect x="4" y="18" width="10" height="4" rx="1" fill="rgba(191,219,254,0.6)"/>
+              <rect x="18" y="18" width="6" height="4" rx="1" fill="rgba(191,219,254,0.4)"/>
+            </svg>
+            Cartão de crédito
+          </div>
+        </div>
+      </div>
+
+      <div class="pay-details">
+        <span>✓ Sem taxas ocultas</span>
+        <span>✓ Entrega em até 24h</span>
+        <span>✓ Suporte garantido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FAQ ════════════════ -->
+<section class="faq-bg">
+  <div class="container text-center">
+    <div class="section-label">Dúvidas</div>
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <div class="faq-list">
+      <details>
+        <summary>A foto realmente parece profissional?</summary>
+        <div class="faq-answer">Sim. Utilizamos inteligência artificial de ponta para criar fotos com qualidade de estúdio fotográfico profissional. O resultado é indistinguível de uma foto tirada em estúdio — com fundo adequado, iluminação perfeita e expressão natural.</div>
+      </details>
+      <details>
+        <summary>Preciso ir a algum lugar ou instalar alguma coisa?</summary>
+        <div class="faq-answer">Não. Todo o processo acontece pelo WhatsApp. Você confirma o pedido, realiza o pagamento e envia suas fotos pelo chat. 100% online, sem instalar nada e sem sair de casa.</div>
+      </details>
+      <details>
+        <summary>E se eu não gostar do resultado?</summary>
+        <div class="faq-answer">Se o resultado não atender suas expectativas, fazemos os ajustes necessários. Meu objetivo é que você fique satisfeita com sua nova Foto Profissional.</div>
+      </details>
+      <details>
+        <summary>Posso usar a foto no LinkedIn, Instagram e WhatsApp?</summary>
+        <div class="faq-answer">Sim. A foto é sua para usar onde quiser: LinkedIn, Instagram, WhatsApp Business, site profissional, apresentações, e-mail corporativo, cartão de visitas digital — sem restrições.</div>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento?</summary>
+        <div class="faq-answer">O pagamento é feito com segurança pelo Mercado Pago. Você pode pagar via PIX (à vista, R$ 27) ou parcelar em até 3× de R$ 9,90 no cartão de crédito. Após a confirmação do pagamento, sua foto entra em produção imediatamente.</div>
+      </details>
+      <details>
+        <summary>Quantas fotos devo enviar?</summary>
+        <div class="faq-answer">Envie pelo menos 3 fotos suas com boa iluminação e rosto bem enquadrado. Não precisa ser em estúdio — fotos tiradas em casa perto de uma janela já funcionam perfeitamente. Após o pagamento, recebo suas fotos pelo WhatsApp e te oriento se precisar.</div>
+      </details>
+      <details>
+        <summary>O que é o estilo Personalizado?</summary>
+        <div class="faq-answer">No estilo Personalizado, você nos envia a foto de referência que quiser como inspiração: pode ser uma roupa específica, um cenário dos seus sonhos, um fundo personalizado — qualquer referência visual que você tenha em mente. É a opção para quem quer uma foto verdadeiramente única e do seu jeito.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <p>© 2025 Rafael Pavan Cardoso de Carvalho · Todos os direitos reservados</p>
+  <p style="margin-top:4px">CNPJ: 66.156.914/0001-54</p>
+  <p style="margin-top:6px">
+    <a href="termos-e-privacidade.html" target="_blank">Termos de Uso e Política de Privacidade</a>
+  </p>
+  <div class="footer-disclaimer">
+    <strong>Este site não é do Facebook:</strong> Este site não faz parte do site do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. Facebook é uma marca comercial independente da Facebook, Inc.
+  </div>
+</footer>
+
+<!-- ════════════════ WHATSAPP FLOAT ════════════════ -->
+<a href="#" class="wa-float" id="wa-float-btn" onclick="openWhatsAppDirect(); return false;" title="Tirar dúvidas pelo WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.548.688 4.932 1.892 6.982L2 30l7.224-1.854A13.922 13.922 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="white"/>
+    <path d="M22.5 19.5c-.3-.15-1.77-.873-2.045-.97-.275-.1-.475-.15-.675.15-.2.3-.773.97-.948 1.17-.175.2-.35.224-.65.075-.3-.15-1.267-.467-2.414-1.49-.892-.795-1.494-1.776-1.669-2.077-.175-.3-.018-.463.132-.613.134-.134.3-.35.45-.524.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.524-.075-.15-.675-1.626-.924-2.226-.243-.585-.49-.505-.675-.515l-.574-.01c-.2 0-.524.075-.799.375s-1.05 1.024-1.05 2.498 1.075 2.898 1.225 3.098c.15.2 2.115 3.23 5.124 4.53.716.31 1.275.494 1.71.633.719.229 1.374.197 1.89.12.576-.086 1.77-.724 2.02-1.422.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z" fill="#25D366"/>
+  </svg>
+</a>
+<div class="wa-tooltip" id="wa-tooltip">Tirar dúvidas pelo WhatsApp</div>
+
+<!-- ════════════════ SCRIPTS ════════════════ -->
+<script>
+  // ┌─────────────────────────────────────────────────┐
+  // │          ⚙️  CONFIGURAÇÕES — EDITE AQUI          │
+  // └─────────────────────────────────────────────────┘
+  const WA_NUMBER      = '5500000000000';              // Ex: 5517999999999
+  const MP_LINK        = 'https://mpago.li/1Cnze1P';
+  const FORMSPREE_URL  = '';                           // Cole aqui sua URL do Formspree (ex: https://formspree.io/f/xyzabc12)
+  // ─────────────────────────────────────────────────
+
+  let selectedStyle = null;
+
+  function selectStyle(card) {
+    document.querySelectorAll('.style-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedStyle = card.dataset.style;
+
+    const notice = document.getElementById('sel-notice');
+    notice.className = 'sel-notice on';
+    notice.innerHTML = `✓ Estilo selecionado: <strong>${selectedStyle}</strong>. Clique abaixo para garantir sua Foto Profissional.`;
+
+    notice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function handleCatalogCTA(e) {
+    e.preventDefault();
+
+    // 1. Valida estilo selecionado
+    if (!selectedStyle) {
+      const grid = document.getElementById('catalog-grid');
+      grid.style.animation = 'none';
+      void grid.offsetWidth;
+      grid.style.animation = 'shake 0.45s ease';
+      const notice = document.getElementById('sel-notice');
+      notice.className = 'sel-notice on error';
+      notice.innerHTML = '⚠️ Por favor, <strong>escolha um estilo</strong> acima antes de continuar.';
+      notice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return false;
+    }
+
+    // 2. Valida telefone
+    const phone = document.getElementById('client-phone').value.trim();
+    const phoneErr = document.getElementById('phone-error');
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length < 8) {
+      phoneErr.style.display = 'block';
+      document.getElementById('client-phone').focus();
+      return false;
+    }
+    phoneErr.style.display = 'none';
+
+    // 3. Envia para Formspree (fire-and-forget)
+    if (FORMSPREE_URL) {
+      fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ whatsapp: phone, estilo: selectedStyle })
+      }).catch(() => {}); // não bloqueia mesmo se falhar
+    }
+
+    // 4. Salva cookie
+    document.cookie = `estilo=${encodeURIComponent(selectedStyle)}; max-age=86400; path=/`;
+    document.cookie = `phone=${encodeURIComponent(phone)}; max-age=86400; path=/`;
+
+    // 5. Redireciona ao Mercado Pago
+    window.open(MP_LINK, '_blank');
+    return false;
+  }
+
+  function openWhatsAppDirect() {
+    const msg = encodeURIComponent(
+      `Oi, Rafa! Tenho uma dúvida sobre a Foto Profissional com IA. 😊`
+    );
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+  }
+
+  // ──── Tooltip do botão WA ────
+  const waBtn = document.getElementById('wa-float-btn');
+  const waTooltip = document.getElementById('wa-tooltip');
+  let tooltipTimer;
+  waBtn.addEventListener('mouseenter', () => {
+    waTooltip.classList.add('visible');
+  });
+  waBtn.addEventListener('mouseleave', () => {
+    waTooltip.classList.remove('visible');
+  });
+  // Mostra tooltip automaticamente após 3s na página
+  setTimeout(() => {
+    waTooltip.classList.add('visible');
+    setTimeout(() => waTooltip.classList.remove('visible'), 3000);
+  }, 3000);
+
+  // ──── Slots de urgência com cookies ────
+  (function initSlots() {
+    // Funções de cookie
+    function getCookie(name) {
+      const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return match ? decodeURIComponent(match[1]) : null;
+    }
+    function setCookie(name, value, maxAge) {
+      document.cookie = `${name}=${encodeURIComponent(value)}; max-age=${maxAge}; path=/`;
+    }
+
+    // Chave baseada no dia atual (muda todo dia)
+    const today = new Date();
+    const dayKey = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+    const dailyKey = `slots_day_${dayKey}`;
+    const visitKey = `slots_visits_${dayKey}`;
+
+    // Número de vagas do dia (gerado 1x por dia, salvo em cookie)
+    let dailySlots = parseInt(getCookie(dailyKey));
+    if (!dailySlots) {
+      // Gera aleatório entre 2 e 6
+      const options = [2, 3, 4, 5, 6];
+      dailySlots = options[Math.floor(Math.random() * options.length)];
+      setCookie(dailyKey, dailySlots, 86400); // expira em 24h
+    }
+
+    // Contagem de visitas do cliente no dia
+    let visits = parseInt(getCookie(visitKey)) || 0;
+    visits++;
+    setCookie(visitKey, visits, 86400);
+
+    // Cada visita subsequente reduz 1 vaga (mínimo 1)
+    let displaySlots = Math.max(1, dailySlots - (visits - 1));
+
+    // Renderiza
+    const taken = 10 - displaySlots;
+    const row   = document.getElementById('slots-row');
+    const label = document.getElementById('slots-label');
+
+    row.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+      const s = document.createElement('div');
+      if (i < taken)        s.className = 'slot taken';
+      else if (i === taken) s.className = 'slot next pulse';
+      else                  s.className = 'slot available';
+      row.appendChild(s);
+    }
+
+    label.textContent = `${displaySlots} ${displaySlots === 1 ? 'vaga disponível' : 'vagas disponíveis'} hoje`;
+    label.style.color = displaySlots <= 3 ? 'var(--cta)' : 'var(--muted)';
+  })();
+</script>
+</body>
+</html>
